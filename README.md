@@ -1,4 +1,4 @@
-# MIE1517HW2---Hand Gesture Recognition (ASL A–I) with CNN + Transfer Learning
+# Hand Gesture Recognition (ASL A–I) with CNN and Transfer Learning
 
 This repo contains my Assignment 2 work on hand gesture recognition. The goal is to classify American Sign Language letters A to I using a dataset of hand images and a convolutional neural network.
 
