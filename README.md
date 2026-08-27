@@ -1,29 +1,36 @@
-# Hand Gesture Recognition (ASL A–I) with CNN and Transfer Learning
+# ASL Hand Gesture Recognition with CNN and Transfer Learning
 
-This repo contains my Assignment 2 work on hand gesture recognition. The goal is to classify American Sign Language letters A to I using a dataset of hand images and a convolutional neural network.
+## Overview
 
-## What’s inside
-- Part A: Collect and clean a small image dataset (ASL A–I)
-- Part B: Train a CNN classifier and evaluate performance
-- Bonus: Use transfer learning (AlexNet feature extraction) to improve test accuracy
+This project classifies American Sign Language hand gestures for the letters A through I. It compares a convolutional neural network trained from scratch with transfer learning based on AlexNet features.
 
-## Key ideas
-- Subject based split to prevent data leakage (images from the same person stay in only one split)
-- CNN trained from scratch, then improved with transfer learning
-- Evaluation includes test accuracy, confusion matrix, and per class precision, recall, and F1
+## Data Preparation
 
-## Results (high level)
-- CNN from scratch: test accuracy around 75.7%
-- Transfer learning with AlexNet features: test accuracy around 80.1%
-- Most confused gestures: G and H (visually similar in the dataset)
+- Collected and cleaned hand-gesture images for nine ASL classes
+- Organized images by subject and gesture
+- Used a subject-based train/validation/test split so images from the same person do not appear across different splits
+- Applied preprocessing suitable for CNN training and transfer learning
 
-## Tech stack
-Python, PyTorch, NumPy, scikit learn, matplotlib (Google Colab friendly)
+## Methodology
 
-## How to run
-1. Open the notebook (or run the exported HTML logic in Colab/Jupyter)
-2. Place your cleaned gesture images in the expected folder structure
-3. Run cells in order: data prep → split → train → evaluate → transfer learning
+- Trained a CNN classifier from scratch
+- Extracted pretrained AlexNet features for transfer learning
+- Evaluated both approaches using accuracy, confusion matrices, precision, recall, and F1 score
+- Analyzed errors across visually similar gesture classes
 
-## Notes
-This project is built for learning and clean evaluation. The split strategy is designed to avoid inflating accuracy by leaking similar images across train and test.
+## Key Results
+
+- CNN trained from scratch: approximately 75.7% test accuracy
+- AlexNet transfer learning: approximately 80.1% test accuracy
+- Transfer learning improved generalization over the baseline CNN.
+- Gestures G and H produced the most confusion because of their visual similarity in the dataset.
+
+## Technologies
+
+Python, PyTorch, AlexNet, transfer learning, NumPy, scikit-learn, matplotlib
+
+## How to Run
+
+1. Open the project notebook in Jupyter Notebook or Google Colab.
+2. Place the cleaned gesture images in the expected folder structure.
+3. Run the workflow in order: preprocessing, subject-based splitting, training, evaluation, and transfer learning.
